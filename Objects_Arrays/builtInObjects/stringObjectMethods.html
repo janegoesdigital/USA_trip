@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="../../style.css">
+ <title>String objects</title>
+</head>
+<body>
+
+<p>Strings are javascript objects</p>
+<p>For examples of the methods and they syntax of built in JS methods on string objects see <a href="index.html">index.html</a></p>
+
+ <dl> <p>string properties</p>
+  <dt>length</dt>
+  <dd>number of characters</dd>
+  <dt></dt>
+  <dd>White cold drink</dd>
+</dl>
+
+<dl> <p>string methods</p>
+ <dt>toUpperCase()</dt>
+  <dd>all upcase</dd>
+
+ <dt>toLowerCase()</dt>
+  <dd>all lower case</dd>
+
+ <dt>charAt</dt>
+ <dd>takes an index number and returns the character found at that position</dd>
+
+ <dt>indexOf()</dt>
+ <dd>returns index number of hte first time a character or set of characters is found in a string</dd>
+
+ <dt>lastIndexOf</dt>
+ <dd>index number of last time a character or set of characters is found</dd>
+
+ <dt>substring()</dt>
+ <dd>returns characters found between 2 index numbers where <br>
+  <ol>
+   <li>first index number <em>includes the character</em></li>
+   <li>last index number <em>excludes the character </em></li>
+  </ol>
+  <p>eg substring(8,14) of "home seet home" will return characters number 8 to 13 ie 'et hom'</p>
+
+  <dt>split()</dt>
+  <dd>spits the string each time the character is found</dd>
+
+  <dt>trim()</dt>
+  <dd>removes white spacde from start and end</dd>
+
+  <dt>replace()</dt>
+  <dd>like find and replace - syntax replace('me', 'w') - replaces 'me' with 'w'</dd>
+
+ <h2>Syntax uses object dot notation and passes in the string as the object</h2>
+
+ <div class="snippet">
+  <p>var saying = 'home sweet home'</p>
+  <p>eg</p>
+  <p>saying.length</p>
+  <p>saying.toUpperCase</p>
+  <p>saying.substring(8.14)</p>
+ </div>
+
+
+  </dd>
+</dl>
+
+
+</body>
+</html>
