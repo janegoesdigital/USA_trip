@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../style.css">
+    <title>Learning about forms</title>
+
+</head>
+
+<body>
+    <div class="overview">
+        <div>
+            <h1>Learning about forms</h1>
+            <nav>
+              <ul>
+                <li><a href="formUI.html">User interface</a></li>
+                <li><a href="formData.html">Retrieving and using data</a></li>
+              </ul>
+
+            </nav>
+        </div>
+
+        <div>
+            <h2>What do forms do?</h2>
+              <p>Get input from users.</p>
+            <h2>HTML5</h2>
+              <p>This page mostly talks about standard HTML.  For more information on HTML5 see <a href="http://www.w3schools.com/html/html5_intro.asp">w3school</a> and <a href="https://www.w3.org/TR/html5/">w3's HTML5 standard</a></p>
+        </div>
+
+        <div>
+            <h2>How do forms work?</h2>
+            <ol>
+                <li>Users fills in a form and presses button to send form to server</li>
+                <li>Name of each form control is sent to the server along with the value of the control. Forms have key: value pairs known as form controls. There may be a lot of these on one form</li>
+                <li>Server processes the form using another language and <em>may</em> store the information in a database </li>
+                <li>Server creates a new page to send back to the browser based on the information received</li>
+            </ol>
+        </div>
+
+        <div>
+            <h1>Form structure/components</h1>
+            <p>Need a form tag + an input control/types + submit button </p>
+        </div>
+
+        <div>
+            <h2> Form presentation</h2>
+            <p>
+                <ul>
+                    <li>form</li>
+                    <li>fieldset - which groups parts of the form together. Most browsers show the fieldset with a line around the edge to show how they are related. Change default with CSS</li>
+                    <li>legend - puts a description of the fieldset listings</li>
+                    <li>there is also a tag for hidden - so that the dev can see the information, but the users can't eg what page the users are on</li>
+                </ul>
+            </p>
+            <h3>Grouping</h3>
+              <p> use the fieldset element. </p>
+            <h3>Labels</h3>
+              <p>Is a label tag, which aids accessibility</p>
+        </div>
+
+    </div>
+
+
+    <div class="controls">
+        <div>
+            <h2>The form tag</h2>
+
+            <p>Use the form tag. For every form tag, must have:
+                <ul>
+                    <li>a <em>method attribute </em>(get or post - usually post if using a DB or have sensitve infor)</li>
+                    <li>an <em>action attribute </em> whose value is the URL for the page on the server that will receive the information in the form </li>
+                </ul>
+    </div>
+
+
+
+    <div class="inputTypes">
+        <h2>Form input types/controls </h2>
+
+
+        <form action="formOutputLearning.html"="get">
+            <p>See in the form tag the action and the method. This is the page where the data will go somehow.</p>
+
+            <div class="explain">
+                <h3>Text input</h3>
+                <p>Two types of text input: straight text and text area</p>
+                <h4>Straight text </h4>
+                <p>The name enables the <em>server </em> to know which form control the data was entered into by the user</p>
+                <p>Size attribute - not really used anymore. Is used for older forms. Now use CSS</p>
+                <p>Maxlength attribute - number of characters a user can enter into the field</p>
+
+                <fieldset>
+                    <legend>Input single line</legend>
+                    <p>Here is the straight text input:
+                        <input type="text" name="straightText" size="15" maxlength="30" />
+                    </p>
+                </fieldset>
+            </div>
+
+            <div class="explain">
+                <h3>Text area</h3>
+                <p>Unusually for a form control, has a beginning and end tag</p>
+                <p>The area is not empty by default. Need to use javascript/jquery can clear the text area when user clicks in the area </p>
+                <p>Generally, use CSS to control the size. Cols and rows attributes is an older way of doing things</p>
+
+                <fieldset>
+                    <legend>Large text area</legend>
+                    <p>What did you think of the gig</p>
+                    <textarea name="comments" rows="8" cols="40"> Your comments</textarea>
+                </fieldset>
+            </div>
+
+            <div class="explain">
+                <h2>Passwords</h2>
+                <p>Password also can have size and maxlength attribute</p>
+                <fieldset>
+                    <legend>Passwords</legend>
+                    <input type="password">
+                </fieldset>
+            </div>
+
+            <div class="explain">
+                <h3>Form validation using HTML5 including password validation</h3>
+                  <p>Traditionally done by js</p>
+                  <p>New validation methods using HTML5 - validate it before it gets to the server</p>
+                  <p>In the following form, uses HTML5 validation of "required".  Don't actually need to give it a value, but some people feel uncomfortable with this, so give it a value of required.</p>
+                 <form action="">
+                  <fieldset>
+                    <legend>Form validation</legend>
+                    <label for="username">Username</label>
+                    <input type="text" name="username" required="required"> <br>
+                    <label for="password">Password</label>
+                    <input type="password" name="password" required="required">
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                  </form>
+             </div>
+
+            <div class="explain">
+                <h2>Buttons</h2>
+                <ul>Button types are:
+                    <li>Input</li>
+                    <li>radio</li>
+                    <li>checkbox</li>
+                    <li>drop down list </li>
+                    <li>multiple select box</li>
+                </ul>
+            </div>
+
+            <div class="explain">
+                <h3>Plain input button</h3>
+                <input type="button" value="Input Button">
+            </div>
+
+            <div class="explain">
+                <h3>Radio buttons</h3>
+                <p>Can only select one button. </p>
+                <p>Once one is checked one will stay checked</p>
+                <p>
+                    <fieldset>
+                        <legend>Radio buttons</legend>
+                        <p>Please select your favourite genre:
+                            <br>
+                            <input type="radio" name="genre" value="rock" checked="checked"> Rock
+                            <input type="radio" name="genre" value="folk"> Folk
+                            <input type="radio" name="genre" value="classical"> Classical
+                            <input type="radio" name="genre" value="jazz"> Jazz
+                        </p>
+                    </fieldset>
+            </div>
+
+            <div class="explain">
+                <h3>Checkboxes</h3>
+                <p>Can select and deselect.</p>
+                <p>Name, value and checked attributes</p>
+                <p>Name attribute sent to server, with the value of the option selected by the user. </p>
+                <p>Name of all related buttons must be the same</p>
+                <p>Using checked can set a default value </p>
+                <fieldset>
+                    <legend>Checkboxes</legend>
+                    <p>
+                        Please select your favourite music service:
+                        <br>
+                        <input type="checkbox" name="service" value="itunes" checked="checked" /> iTunes
+                        <input type="checkbox" name="service" value="spotify" /> spotify
+                        <input type="checkbox" name="service" value="pandora" /> pandora
+                    </p>
+                </fieldset>
+            </div>
+
+            <div class="explain">
+                <h3>Drop down list - select element with option tag</h3>
+                <p>Option element used to specify the options. Option element contains the <em>vaulue that is sent to the server along with the name of the controller </em></p>
+                <p>Can use a <em>selected </em>attribute to set a default when the page loads</p>
+                <p>Only one can be chosen</p>
+                <fieldset>
+                    <legend>Drop down</legend>
+                    <p>What device do you listen to music on?</p>
+                    <select name="devices">
+                        <option value="ipod">Ipod</option>
+                        <option value="radio" selected="selected">Radio</option>
+                        <option value="bose speakers">Bose</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="explain">
+                <h3>Multiple select box</h3>
+                <p>turn the select element to show multiple options using size - Duckett says the implementation of this is not very good</p>
+                <p>Enable more than one thing to be selected using multiple attribute. Need to hold down command key on mac and control key on PC to choose multiple options</p>
+                <fieldset>
+                    <legend>Multiple select box</legend>
+                    <p>Do you play any of the following instruments</p>
+                    <select name="instruments" multiple="multiple">
+                        <option value="guitar" selected="selected">Guitar</option>
+                        <option value="mandonlin">mandolin</option>
+                        <option value="violin">Violin</option>
+                        <option value="whistle">Whistle</option>
+                        <option value="bagpipes">Bagpipes</option>
+                    </select>
+                </fieldset>
+        </form>
+        </div>
+
+        <div class="explain">
+            <form action="formOutputLearnings.html" method="post">
+                <h2>Uploading things etc </h2>
+                <p>Can be use for files, images, pdfs mp3s etc </p>
+                <p>Creates a box that looks like a text books, followed by a choose file button that enables them to select a a file from their computer</p>
+                <p>Method value on the form <em>must</em> have a value of post. See the html - I've created a new form just for this</p>
+                <fieldset>
+                    <legend>Upload something</legend>
+                    <p>Upload your file</p>
+                    <input type="file" name="user-song" />
+                    <br>
+                    <input type="submit" value="upload">
+                </fieldset>
+
+            </form>
+        </div>
+
+        <div>
+            <form action="file:///Users/janehogan/Documents/CounterpointServices/Websites/USA_trip/formOutputLearnings.html" method="get">
+                <h2>Submit button</h2>
+                <p>Used to submit the form to the server</p>
+                <p>Can have a name attribute, but doesn't need one</p>
+                <p>Value attribute used to control the text that appears on the button</p>
+                <p>Can use an image for the button - add an input type of image - see the book - need to also add the link to the image etc. Browsers do their own thing with the button.</p>
+                <p>Button element added to allow coders more control over what they do</p>
+                <p>Can also have an input type of hidden. Not shown on page but can be seen in the source code. Enable coder to add info for themselves to eg see where a use is</p>
+                <fieldset>
+                    <p>Subscribe to one of our email lists</p>
+                    <legend>Submit</legend>
+                    <input type="text" name="email" />
+                    <input type="submit" name="subscribe" value="Subscribe">
+                    <input type="submit">
+                    <input type="image">
+                    <input type="hidden">
+
+                </fieldset>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="explain">
+      <h3>Dates with HTML5</h3>
+        <p>This is just a taster.  See the HTML5 spec</p>
+        <p>Can give an input field an attribute of date.  Will have different appearances across browsers.</p>
+        <fieldset>
+          <legend>HTML5 dates</legend>
+          <label for="depart">Departure date</label>
+          <input type="date" name="depart">
+          <input type="submit" value="Submit">
+        </fieldset>
+       </div>
+
+     <div class="explain">
+      <form action="">
+      <h3>Email and URL input - HTML5</h3>
+      <p>browsers that don't support these will use them as textboxes</p>
+      <fieldset>
+        <legend>Email</legend>
+        <p>Please enter your email address</p>
+        <label for="email" name="email"></label>
+        <input type="email" name="email">
+        <input type="submit" value="Submit">
+      </fieldset>
+      </form>
+     </div>
+
+  <div class="explain">
+   <h3>URL input with HTML5</h3>
+   <form action="">
+    <fieldset>
+     <legend>URL</legend>
+     <p>Please enter your website address</p>
+     <input type="url" name="website">
+     <input type="submit" value="Submit">
+    </fieldset>
+   </form>
+  </div>
+
+   <div class="explain">
+    <h3>Search input with HTML5</h3>
+     <p>For single line text box for search queries.  Need to have type attribute of search. Older browseres will treat it like a tetx box. Safari adds a cross to show the search box can be cleared</p>
+     <p>Can have placeholder text</p>
+     <form action="">
+      <fieldset>
+       <legend>Search</legend>
+       <p>Search:</p>
+       <input type="search" name="search">
+       <input type="submit" value="Submit">
+      </fieldset>
+     </form>
+   </div>
+
+   <div class="explain">
+
+       <h3>Reset</h3>
+       <p>Rarely used now</p>
+       <fieldset>
+           <input type="reset">
+       </fieldset>
+   </div>
+
+
+  </div>
+
+ </div>
+
+
+    </form>
+
+
+<div class="references">
+    <h1>Reference</h1>
+    <p><cite>John Duckett HTML & CSS <book></book></cite></p>
+    <p><a href="https://api.jquery.com/radio-selector/">jQuery</a></p>
+ </div>
+
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+    <script src="../main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charFet="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../style.css">
+  <title>How to include files</title>
+</head>
+<body>
+
+  <h1>Where do links to files go?</h1>
+    <p>In the head</p>
+  <h1>Where do links to script files go?</h1>
+    <p>Just before the end of the body tag</p>
+  <h1>How do I refer to files that appear somewhere else in my folder structure?</h1>
+    <h3>Referring to relative file paths</h3>
+      <p>Starting with "/" returns to the root directory and starts there</p>
+      <p>Starting with "../" moves one directory backwards and starts there </p>
+      <p>Starting with "../../" moves two directories backwards and starts there (and so on...)</p>
+      <p>To move forward, just start with the first subdirectory and keep moving forward</p>
+
+    <p><a href="https://css-tricks.com/quick-reminder-about-file-paths/">See CSS tricks website</a></p>
+
+
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>

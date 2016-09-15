@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Learning about dates</title>
+
+</head>
+<body>
+<h1>Learning about dates</h1>
+
+  <h2>Planning</h2>
+
+  <h2>HTML and dates</h2>
+  <p>Note that there is a html input type for dates which is quite nice</p>
+  <p>See <a href="../USA_trip/Forms_about/formUI.html">dates</a></p>
+
+<h1>Javascript date object</h1>
+
+<p>
+
+  <p class="snippet">new Date()</p>
+  <p class="snippet">new Date(value)</p>
+  <p class="snippet">new Date(dateString)</p>
+  <p class="snippet">new Date(year, month[, day[, hour[, minutes[, seconds[, milliseconds]]]]])</p>
+
+  <p class="snippet">
+  var dateInput = "2016, 10, 2";<br>
+
+  var startDate = new Date(dateInput);<br>
+
+  console.log(startDate.toString());    <br>
+console.log(startDate.toDateString()); <br>
+
+</p>
+
+
+
+<div id="dates">
+    <h3>What's today's date</h3>
+
+      <p id="demo"></p>
+  <!-- This gets the js function -->
+
+      <p id="newDate"></p>
+
+      <p>The getDay() method returns the weekday as a number:</p>
+
+      <p id="numDay"></p>
+      <p>You can use an array to display the name of the weekday:</p>
+      <p id="nameDay"></p>
+      <p id="newDay"></p>
+
+</div>
+
+<div>
+  <form action="">
+    <fieldset>
+      <legend >Choose dates</legend>
+        <h3>Start date</h3>
+
+          <p>Date: <input type="text" id="datepicker"></p>
+
+            <input type="submit" value="Submit">
+
+        <h3>How many nights?</h3>
+
+          <p>The number of nights you have chosen is [numberNights function output]</p>
+          <p>Is this correct?</p>
+
+          <p>Yes/No/Amend</p>
+
+      </fieldset>
+    </form>
+  </div>
+
+
+
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+  <script src="date.js"></script>
+</body>
+</html>
