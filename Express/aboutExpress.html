@@ -4,9 +4,79 @@
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="../style.css">
  <title>About express</title>
 </head>
 <body>
+
+
+
+<h1>HTTP request methods</h1>
+<p>Different methods for communicating between the server and the client</p>
+<p>Main methods - GET AND POST - HTTTP verbs</p>
+
+<h1>Requests from the browser to the server</h1>
+<h2>Request Headers</h2>
+<p>Browser sends info to the server via REQUEST HEADERS - see location 2059 for code that enables you to see what info is being sent</p>
+<p>All the info the browser is sending is accessible via <em>request object's headers property</em></p>
+
+
+
+<h2>Request object</h2>
+<p>Starts of as in instance of http.IncomingMessage - a core Node ojbecct. Express adds extra functionality</p>
+ <p>See location 2148 for useful methods</p>
+ <ul>These include:
+  <li>req.params</li>
+  <li>req.parm(name)</li>
+  <li>req.query</li>
+  <li>req.body</li>
+  <li>req.route</li>
+  <li>req.cookies.req.signedCookies</li>
+  <li>req.headers</li>
+ </ul>
+
+<p>There are lots more</p>
+
+<h2>Request body</h2>
+ <p>GET requests don't have body but POST requests doe. </p>
+
+
+
+<h1>Responses from the server</h1>
+
+<h2>Response headers</h2>
+<p>Server sends back info in the <em>response header object </em> eg content type.  Usually it is metadata and server information </p>
+<p>Response headers can be used by hackers - can disable it.</p>
+<p>Content-Type header important - tells the browser how to render the content. </p>
+
+ <h2>Response object</h2>
+<p>Starts its life as instance of http.ServerResponse - core node object - with Express adding functionality.</p>
+<p>Seeeloc 2186 for list of methods on the object </p>
+
+ </ul>
+
+
+
+<h1>Parameters</h1>
+ <p>Params can be confusing becuase it "munges" different types of info together - can come from the querystring, the session, the request body or the named routing parameters.  Recommends using dedicated properties that hold various types of parameters</p>
+
+
+<h1>Key things generally use with express</h1>
+<h2>Rendering content</h2>
+<p>ie getting it onto the page</p>
+<ul>
+ <li>res.render </li>
+ <li>res.send</li>
+ <li>req.session</li>
+</ul>
+
+<h2>Processing forms</h2>
+<p>info in the forms will usually be in req.body or occassionally the req.query</p>
+
+<h2>Providing an API</h2>
+<p>will be returning JSON, XML or even plaintext</p>
+
+
 <h1>Routes</h1>
 
 <p>app.get - method we're adding routes </p>
