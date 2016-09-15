@@ -9,7 +9,7 @@ It's current structure is a bit of mess because it's evolving as both a concept 
 
 #Current focus
 Currently, I am focusing on having a deep understanding of htmls, css javascript, and the associated MEAN stack.  I
-am sort of working my conceptually through these things like a bridge with a focus on:
+am sort of working my way conceptually through these things like a bridge with a focus on:
 - the front end - how do I get stuff on the page.  I have had a particular focus on forms - one side of the bridge; and
 - the back-end - the other side of the bridge.  I currently have mongodb running locally, and am working out how to connect it to the front-end wit mongoose and express.
 At some point, the front-end and back-end will meet to make a whole website - just like a bridge see!
