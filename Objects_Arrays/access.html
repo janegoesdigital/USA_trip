@@ -230,6 +230,42 @@ var firstObKeysFirstItem = firstObKeys[0]; <br>
 </p>
 </div>
 
+
+<h3>To retrieve a new array with objects that meet a specified condition - use filter</h3>
+<p>Filter methods - returns the nested objects that match the critera.  The word potato can be anything - it's standing in there so that the it's really THIS OBJECT.father = THIS.  Returns the whole object </p>
+<div class="snippet">
+ <p> The array with objects <br>
+  var ancestry = [ { name: 'Carolus Haverbeke',
+    sex: 'm',
+    born: 1832,
+    died: 1905,
+    father: 'Carel Haverbeke',
+    mother: 'Maria van Brussel' },
+  { name: 'Emma de Milliano',
+    sex: 'f',
+    born: 1876,
+    died: 1956,
+    father: 'Petrus de Milliano',
+    mother: 'Sophia van Damme' },]
+  </p>
+
+    <p>console.log(ancestry.filter(function(potato){
+     return potato.father == "Carel Haverbeke";
+    }));
+    console.log(ancestry.filter(function(potato){
+ return potato.sex == "f";
+}));
+
+</p>
+</div>
+
+<h3>Map an array</h3>
+<p>This works also, if you have nested objects.  It takes an array and a function (I think) and creates A NEW array, with that function applied to EACH item in the array</p>
+
+
+<h3>Reduce</h3>
+<p>An another array method.  Takes in an argument, that enables you to REDUCE the array to a single number.  I used this to calculate the costs of each journey</p>
+
 <h1>Finding things in an object</h1>
 
 <h2>obj.hasOwnProperty(prop)</h2>
