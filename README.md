@@ -5,6 +5,7 @@ This set of code is a work in progress.  I am using it to do both:
 
 # Current structure
 The current structure now has 4 main parts to it:
+
 1. The draft sites I have.  Currently, I only have one draft site, which is called Itinerary_simple.  In it, I have used only very basic html, css, js and direct DOM manipulation methods.  I will be adding to this as I go.
 
 2. A section called My_notes.  In it, I have consolidated the notes I am taking as I'm learning, and exercises etc that I am doing based on books I am reading.  It is my own personal reference material.
