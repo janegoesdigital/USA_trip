@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="../../style.css">
+
+ <title>Objects and arrays</title>
+</head>
+<body>
+
+<h1>Think aloud from here</h1>
+
+ <p>I find data structures hard to get access to the information </p>
+
+ <h1>Creating nested data structures using constructors</h1>
+ <p>I really want to be able to create a nested data structure that is an object within an object </p>
+ <p>This is the type of thing I want</p>
+ <p>
+  var object = {
+   key: {
+    object,
+   }
+  },
+
+
+<p>Do solve this, I have changed the data structure, but is not what I want.  See objects <a href="#objarrays">Objects within an array</a>within an array</p>
+<br>
+<br>
+<br>
+<br>
+
+
+<h2 id="objarrays"> Objects within an array</h2>
+<p>Can iterate over an object that contains arrays using the forEach method of ECMA6.  Then construct the expression you want to use as part of the funtion, then use eval() to evaluate that string as a variable rather than a stsring.  I get a warning though, that eval() can be harmful.</p>
+
+//This is the ECMA 6 way  - create a function and then call it using the forEach method.  This is the example from mdn.
+
+// function logArrayElements(element, index, array) {
+//   console.log('a[' + index + '] = ' + element);
+// }
+//
+// // Notice that index 2 is skipped since there is no item at
+// that position in the array.
+// [2, 5, , 9].forEach(logArrayElements);
+
+//This is the version of this that I got working for the data above
+
+function costComparison(element, index, carHire) {
+  var i = "[" + index + "]";
+  var costString = "carHire" + [i] + ".cost";
+  var pickUpString = "carHire" + [i] + ".pickUp";
+  var costActual = eval(costString);
+  var pickUpActual = eval(pickUpString);
+  var costMessage = "The cost from " + pickUpActual + " will be AU$" + costActual;
+//   console.log("[" + index + "]");
+//   console.log(i);
+//   console.log(costString);
+//   console.log(costActual);
+//   console.log(pickUpString);
+//   console.log(pickUpActual);
+  console.log(costMessage);
+
+}
+
+carHire.forEach(costComparison);
+
+<h1>Finding things in an object</h1>
+
+<h2>obj.hasOwnProperty(prop)</h2>
+<p></p>
+ </p>
+
+
+<h2>var newObj = trainTrips.toString();</h2>
+<p>Turns the whole object into a string eg from ["train", "train"] to "[train train]"</p>
+</body>
+</html>

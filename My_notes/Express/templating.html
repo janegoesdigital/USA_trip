@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="../../style.css">
+ <title>Templating</title>
+</head>
+<body>
+
+<h1>What is templating </h1>
+ <p>Templatng means that you don't have to worry about switching languages.</p>
+ <p>Can write in your target language AND have the ability to insert dynamic data without having to go out to JS. Recommends avoiding writing HTML in JS</p>
+ <p><ul>types of template engines include</ul>
+  <li>mustache</li>
+  <li>jade</li>
+  <li>handlebars</li>
+ </p>
+ <p>Can render your template option
+  <ul>
+   <li>client side; or</li>
+   <li>server side ie render HTML <em>before</em>it is sent to the client. Hides details and supports caching - important for performance</li>
+  </ul>
+ </p>
+
+ <h1>How does it work?</h1>
+ <p>Need to understand <em>context</em>. <quote>When you render a template, you pass the templating engine an object called the <em>context object</em> and this is what allows the replacement to work</quote>  </p>
+
+ <h1>Handlebars templating notation</h1>
+
+ <h2>Context object</h2>
+ <div class="snippet">
+  <p>context object <br>
+   name: 'Buttercup'}</p>
+  <p> template: <br>
+   /<p> Hello, {{name}}!</p>
+  </p>
+
+  <p>The {{}} notation says pass in the dynamic content from the context object.  If want make sure that the html is passed in also, use 3 curly brackets - - not 2 ie {{{name}}}
+ </div>
+
+ <h2>Comments</h2>
+ <div class="snippet">
+ {{ ! super-secret comment }}
+
+ <p>&lt!-- not-so-secret comment --&gt </p>
+
+ </div>
+
+ <h2>Blocks</h2>
+
+ <div class="snippet">
+  <p>This is quite complicated.  Go back to it. </p>
+  <p>Have some helpers eg an each helper, an if helper.  If the property itself is an object, can ue normal dot notation to format it. </p>
+  <p>{{.}} - refers to the current context </p>
+ </div>
+
+ <h1>Views and layouts</h1>
+
+ <h2>What are they </h2>
+
+ <p>view usually represents individual page on website. </p>
+ <p>Layout - special kind of view - a template for templates</p>
+ <p>View is rendered BEFORE the layout. Enables view to customise the layout, which becomes important for <em>sections</em></p>
+
+<h2>Making sure they are used - file structure and app.get code </h2>
+<p>Views go in the views main directory.  Layouts, go in a layout subdirectory</p>
+
+<div class="snippet">
+ <p>can render a view from foo.handlebars file this way:
+ <br>
+ app.get('/foo', function(req, res{
+  res.render('foo');
+ }));
+ Will default to the main layout. Can also specify layout none or a different layout
+</p>
+</div>
+
+<h2>Partials</h2>
+<p>ie reusable compontents - known as widgets in front end circles</p>
+<div class=snippet>
+ <p>
+  To get a partial up and running need to:<br>
+  <ol>
+   <li>create the partial in the partials file</li>
+   <li>add middleware to the app file to get the partial</li>
+   <li>put the partial on a page </li>
+  </ol>
+  To include a partial on a page use {{> partial_name}}
+ </p>
+</div>
+<h2>Sections</h2>
+<p>Sections deal with the scenario where your view needs to inject itself into different parts of your layout eg add something to the head element or insert a script that uses jQueyr </p>
+<p>No built in way to do this in handlebars or exrpess - but can use Handlebar helpers - adding an object we'll call section.  See the notes </p>
+
+<h2>Useful resources</h2>
+<ul>
+<li><a href="https://html5boilerplate.com/">HTML5 boilerplate</a></li>
+<li><a href="https://themeforest.net/">Theme forest</a></li>
+<li><a href="https://wrapbootstrap.com/themes">Wrap bootstrap</a></li>
+
+</ul>
+
+
+
+
+
+</body>
+</html>

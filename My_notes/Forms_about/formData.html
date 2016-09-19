@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../style.css">
+  <title>Form data</title>
+</head>
+<body>
+<h1>How do I use data collected from a form?</h1>
+<nav>
+  <ul>
+    <li><a href="formUI.html">User interface</a></li>
+    <li><a href="formData.html">Retrieving and using data</a></li>
+  </ul>
+
+<div>
+  <h2>Receiving the data from the forms and using it in javascript
+  is working out what's been selected</h2>
+
+  <p>So, I need to know what has been selected. It will be selected on click</p>
+  <p>There are two actions here when using a radio button, There is a click in the radio button, followed by a click on the button to submit the form. </p>
+
+  <h3>Selecting radio buttons</h3>
+  <p>This will select all the radio buttons with the name=eventType </p>
+  <p class="snippet">$( "input[name=eventType]:radio" )</p>
+
+  <p>This will get the element</p>
+
+  <p class="snippet">$("input[name=chooseEvent]")</p>
+
+  <p>This will get the value selected </p>
+  <p class="snippet">$( "input[name=eventType]:checked").val();</p>
+
+  <p>In the js, define the returned value as a variable, and then use it in the JS </p>
+
+
+
+  <p>see <a href="https://api.jquery.com/radio-selector/">jQuery</a></p>
+
+  <p>when the choose event button is clicked, create a variable with the value equal to the radio button with a name of eventType and return the value </p>
+  <p>Once I know what has been selected, I have different workflows depending on what's been selected</p>
+  <p>If an eventType with a value of stay has been submitted, I'll show the date picker etc </p>
+
+</div>
+
+<h2>Receiving the data from the forms and using it in javascript
+is working out what's been selected</h2>
+
+<p>So, I need to know what has been selected. It will be selected on click</p>
+<p>There are two actions here when using a radio button, There is a click in the radio button, followed by a click on the button to submit the form. </p>
+
+<h3>Selecting radio buttons</h3>
+<p>This will select all the radio buttons with the name=eventType </p>
+<p class="snippet">$( "input[name=eventType]:radio" )</p>
+
+<p>This will get the element</p>
+
+<p class="snippet">$("input[name=chooseEvent]")</p>
+
+<p>This will get the value selected </p>
+<p class="snippet">$( "input[name=eventType]:checked").val();</p>
+
+<p>In the js, define the returned value as a variable, and then use it in the JS </p>
+
+
+
+<p>see <a href="https://api.jquery.com/radio-selector/">jQuery</a></p>
+
+<p>when the choose event button is clicked, create a variable with the value equal to the radio button with a name of eventType and return the value </p>
+<p>Once I know what has been selected, I have different workflows depending on what's been selected</p>
+<p>If an eventType with a value of stay has been submitted, I'll show the date picker etc </p>
+
+  <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <script src="../node_modules/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+  <script src="../main.js"></script>
+</body>
+</html>

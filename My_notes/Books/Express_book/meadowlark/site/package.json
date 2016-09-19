@@ -1,0 +1,24 @@
+{
+  "name": "meadowlark.js",
+  "version": "1.0.0",
+  "description": "site for study from the node and express book",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "study"
+  ],
+  "author": "jane hogan",
+  "license": "ISC",
+  "dependencies": {
+    "express-handlebars": "^3.0.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2",
+    "zombie": "^3.1.1"
+  }
+}

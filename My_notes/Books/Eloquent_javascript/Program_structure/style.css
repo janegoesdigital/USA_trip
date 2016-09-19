@@ -1,0 +1,20 @@
+div {
+  float: left;
+  display: inline-block;
+  text-align: center;
+  margin-right: 10em;
+  max-width: 25%vp;
+}
+
+#count {
+background-color: pink;
+}
+
+
+#by3{
+  background-color: aliceblue;
+}
+
+#board {
+  background-color: green;
+}

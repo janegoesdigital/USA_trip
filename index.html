@@ -24,213 +24,46 @@
     <ul class="pure-menu-list">
         <li class="pure-menu-item pure-menu-selected"><a href="index.html" class="pure-menu-link">Home</a>
         </li>
-        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"><a href="../USA_trip/Files_links/cssFileReferences.html" class="pure-menu-link">Files and links</a>
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"><a href="My_notes/Files_links/cssFileReferences.html" class="pure-menu-link">Files and links</a>
          <ul class="pure-menu-children">
-             <li class="pure-menu-item"><a href="../USA_trip/Files_links/cssFileReferences.html" class="pure-menu-link">Files and links</a></li>
-             <li class="pure-menu-item"><a href="../USA_trip/Files_links/links.html" class="pure-menu-link">Form UI learnings</a></li>
+             <li class="pure-menu-item"><a href="My_notes/Files_links/cssFileReferences.html" class="pure-menu-link">Files and links</a></li>
+             <li class="pure-menu-item"><a href="My_notes/Files_links/links.html" class="pure-menu-link">Form UI learnings</a></li>
          </ul>
         </li>
         <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
             <a href="index.html" id="menuLink1" class="pure-menu-link">Forms</a>
             <ul class="pure-menu-children">
-                <li class="pure-menu-item"><a href="index.html" class="pure-menu-link">Test form - stays</a></li>
-                <li class="pure-menu-item"><a href="../USA_trip/Forms_about/formUI.html" class="pure-menu-link">Form UI learnings</a></li>
-                <li class="pure-menu-item"><a href="../USA_trip/Forms_about/formData.html" class="pure-menu-link">Using form data</a><li>
-                 <li class="pure-menu-item"><a href="../USA_trip/Forms_about/formOutputLearnings.html" class="pure-menu-link">Form data output</a><li>
+                <li class="pure-menu-item"><a href="wip/formInput.html" class="pure-menu-link">Test form - stays</a></li>
+                <li class="pure-menu-item"><a href="My_notes/Forms_about/formUI.html" class="pure-menu-link">Form UI learnings</a></li>
+                <li class="pure-menu-item"><a href="My_notes/Forms_about/formData.html" class="pure-menu-link">Using form data</a></li>
+                 <li class="pure-menu-item"><a href="My_notes/Forms_about/formOutputLearnings.html" class="pure-menu-link">Form data output</a></li>
             </ul>
         </li>
         <li class="pure-menu-item pure-menu-allow-hover">
             <a href="dateLearnings.html" id="menuLink1" class="pure-menu-link">Dates</a>
         </li>
         <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
-            <a href="../USA_trip/Objects_Arrays/access.html" id="menuLink1" class="pure-menu-link">Objects and arrays</a>
+            <a href="My_notes/Objects_Arrays/access.html" id="menuLink1" class="pure-menu-link">Objects and arrays</a>
+            <ul class="pure-menu-children">
+                <li class="pure-menu-item"><a href="My_notes/Objects_Arrays/access.html" class="pure-menu-link">Getting to content in objects/arrays</a></li>
+                <li class="pure-menu-item"><a href="My_notes/Objects_arrays/builtInObjects/stringObjectMethods.html" class="pure-menu-link">Strings as objects </a></li>
+                <li class="pure-menu-item"><a href="My_notes/Objects_arrays/builtInObjects/stringObjectMethods.html" class="pure-menu-link">The DOM - no jQuery</a></li>
+
+            </ul>
+
+        </li>
+
+
+       <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"><a href="My_notes/Files_links/cssFileReferences.html" class="pure-menu-link">Draft sites</a>
+         <ul class="pure-menu-children">
+             <li class="pure-menu-item"><a href="Itinerary_simple/itinerary.html" class="pure-menu-link">Basic HTML, JS and DOM</a></li>
+         </ul>
         </li>
 
     </ul>
 </div>
 
 
-<!-- <li><a href="formUI.html">User interface</a></li>
-<li><a href="formData.html">Retrieving and using data</a></li> -->
-
-
-    <h2>Planning</h2>
-
-    <div class="select">
-        <h3>What would you like to schedule?</h3>
-
-        <p>On the forms. Must have an imput name otherwise it won't get submitted. </p>
-        <p>fieldset groups related elements of the form together</p>
-
-        <h2>What would you like to do?</h2>
-
-        <form action="" method="get" class="pure-form pure-form-stacked">
-            <fieldset>
-                <legend>What do you want to do? </legend>
-                <input type="radio" name="eventType" value="Stay"> Stay
-                <br>
-                <input type="radio" name="eventType" value="Activity"> Activity
-                <br>
-                <input type="radio" name="eventType" value="Travel"> Travel
-                <br>
-                <!-- <input type="button" name="chooseEvent" value="Choose Event Type" id="chooseEvent"> -->
-                <input type="button" value="Submit" name="chooseEvent" value="Choose Event Type" class="pure-button" id="chooseEvent">
-            </fieldset>
-        </form>
-    </div>
-
-    <div class="choicesFeedback">
-        <h2>You are working on this!</h2>
-        <p id="eventMessage"></p>
-
-
-    </div>
-
-
-    <div class="travel">
-        <form action="" method="get" class="pure-form pure-form-aligned">
-            <fieldset>
-                <legend>Choose where you want to go or where you will be?</legend>
-
-                <input type="radio" name="location" value="New York" checked> New York
-                <br>
-                <input type="radio" name="location" value="Boston"> Boston
-                <br>
-                <input type="radio" name="location" value="Quebec"> Quebec
-                <br>
-                <input type="radio" name="location" value="Montreal"> Montreal
-                <br>
-                <input type="radio" name="location" value="South Amboy"> South Amboy
-                <br>
-                <input type="radio" name="location" value="Villa Nova"> Villa Nova
-                <br>
-                <input type="radio" name="location" value="Washington"> Washington
-                <br>
-
-                <input type="button" name="chooseLocation" value="Choose Location" id="chooseLocation">
-            </fieldset>
-
-        </form>
-
-    </div>
-
-    <!-- <div class="dates">
-
-This uses the jquery date thingy.  I haven't got it working yet
-  <form action="">
-    <fieldset>
-      <legend >Choose dates</legend>
-        <h3>Start date</h3>
-
-          <p>Date: <input type="text" id="datepicker"></p>
-
-            <input type="button" name="startDate" value="Choose a start date" id="startDate">
-
-        <h3>How many nights?</h3>
-
-          <p>The number of nights you have chosen is [numberNights function output]</p>
-          <p>Is this correct?</p>
-
-          <p>Yes/No/Amend</p>
-
-      </fieldset>
-    </form>
-  </div> -->
-
-
-    <div class="dates">
-
-        <p>Can give an input field an attribute of date. Will have different appearances across browsers.</p>
-        <form action="" method="get" class="pure-form pure-form-aligned">
-            <fieldset>
-                <p> When will you arrive
-                    <br>
-                    <legend>Arrival</legend>
-                    <label for="arrive">What day will you arrive</label>
-                    <input type="date" name="arrive">
-                    <input type="submit" value="Submit">
-                </p>
-            </fieldset>
-            
-            <fieldset>
-                <legend>Departure</legend>
-                <p> When will you leave
-                    <br>
-                    <label for="depart">Departure date</label>
-                    <input type="date" name="depart">
-                    <input type="submit" value="Submit">
-                </p>
-            </fieldset>
-        </form>
-
-        <p>This is a total of x number of nights <em>FUNCTION</em> </p>
-        <p>Is this correct?</p>
-        <form action="" method="get" class="pure-form pure-form-aligned">
-            <fieldset>
-             <p>
-                <input type="radio" name="confirmDuration" value="Yes">Yes
-                <input type="radio" name="confirmDuration" value="No"> No
-                <input type="button" value="Submit" name="duration" value="Is this correct?" id="chosenDates">
-                </p>
-            </fieldset>
-        </form>
-
-    </div>
-
-    <div class="accomodation">
-        <h3>Where are you staying?</h3>
-        <form action="" method="get">
-            <fieldset>
-                <legend>Please tell us where you are staying stay?</legend>
-                <p>What kind of place is it?</p>
-                <!-- The submit here is not working  -->
-                <input type="radio" name="accomodationType" value="Friend">Friend
-                <input type="radio" name="accomodationType" value="Hotel"> Hotel
-                <input type="radio" name="accomodationType" vaue="Air BnB"> Air BnB
-                <input type="button" value="Sumbit" name="accomodationChoice">
-                <p>What's it's name</p>
-                <input type="text" name="accomodationText">
-                <input type="button" value="Submit" name="accomodationName">
-                <p>What's the cost</p>
-                <input type="text" name="cost">
-
-                <input type="radio" name="costType" value="nightly">Nightly
-                <input type="radio" name="costType" value="allNights">For the full time
-                <input type="radio" name="costCurrency" value="AUD">AUD
-                <input type="radio" name="costCurrency" value="Can">Can
-                <input type="radio" name="costCurrency" value="USA">USA
-
-
-
-
-
-
-
-            </fieldset>
-        </form>
-
-
-    </div>
-
-    <!-- <form action="">
-    <fieldset>
-      <legend>What date would you like to start on?</legend>
-        <input type="text" name="startDay" value="Please add a number" id="startDate"> What date - in a number - would you like to start on<br>
-        <input type="button" name="startDate" value="Pick the date">
-
-        <select id="month">
-          <option name="month" value="October" >October</option>
-          <option name="month" value="November">November</option>
-        </select>
-        <input type="button" name="chooseMonth" value="Select the month">
-
-
-    </fieldset>
-  </form> -->
- </div>
-</div>
-
-</div>
 
 
 
