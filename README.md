@@ -6,10 +6,11 @@ This set of code is a work in progress.  I am using it to do both:
 # Current structure
 The current structure now has 4 main parts to it:
 
-1. The draft sites I have.  There are now 3 sites within that section:
+1. The draft sites I have.  There are now 4 sites within this section:
   * Itinerary_simple.  Initially, I used only very basic html, css, js and direct DOM manipulation methods.  I have now added materialize.css styling and jQuery functions.  I will be adding to this as I go;
   * Mongoose_simple - I'm working through connecting to a Mongodb using mongoose.  Also using express and handlebars;
-  * Express_simple - although this is not working.
+  * Express_simple - although this is not working;
+  * Itinerary_express - where I am going to rebuild my itinerary using mongo, mongoose, express and handlebars. 
 
 2. A section called My_notes.  In it, I have consolidated the notes I am taking as I'm learning, and exercises etc that I am doing based on books I am reading.  It is my own personal reference material.
 
