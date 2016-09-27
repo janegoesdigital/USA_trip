@@ -17,14 +17,11 @@ app.get('/', function (req, res) {
 });
 
 
-
-
-
 //Using mongoose
 
 
-var Todo = require('./todoModel');
-var path    = require("path");
+// var Todo = require('./todoModel');
+// var path    = require("path");
 
 
 app.get('/', function(req, res) {

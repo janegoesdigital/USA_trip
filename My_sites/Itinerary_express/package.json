@@ -1,0 +1,20 @@
+{
+  "name": "express_itinerary",
+  "version": "1.0.0",
+  "description": "a version of usa trip using express and mongodb",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "express",
+    "mongoose",
+    "mongo",
+    "handlebars"
+  ],
+  "author": "jane hogan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+}

@@ -18,5 +18,5 @@ var todoSchema = new Schema({
 // we need to create a model using it
 var Todo = mongoose.model('Todo', todoSchema);
 
-// make this available to our users in our Node applications
+// make this available in our Node applications
 module.exports = Todo;

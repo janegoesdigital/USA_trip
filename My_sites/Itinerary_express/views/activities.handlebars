@@ -1,0 +1,15 @@
+<h1>Hello.  Content from the handlebars activities starts here</h1>
+<p>
+ Currently, I am using this to render all the activities
+</p>
+
+{{#each tasksNameForHandlebars}}
+
+<h3>City : {{city}}  </h3>
+<p> Activity name: {{name}} <br>
+Description: {{description}} <br>
+Cost: {{cost}} <br>
+Are we doing it: {{doIt}} <br>
+Date: {{date}} </br>
+</p>
+{{/each}}
