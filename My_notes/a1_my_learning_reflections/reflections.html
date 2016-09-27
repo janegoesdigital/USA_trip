@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <!-- <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../css/materialize-css/bin/materialize.css" media="screen,projection" />
+
+    <!-- <link rel="stylesheet" href="../style.css"> -->
+    <title>Trips</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo right">Our US adventure</a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="about.html">About the simple site</a></li
+                </ul>
+            </div>
+        </nav>
+
+
+        <h1>Welcome to our American adventure 2016 and some learnings!</h1>
+
+
+        <div class="pure-menu pure-menu-horizontal">
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item pure-menu-selected"><a href="index.html" class="pure-menu-link">Home</a>
+            </li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"><a href="My_notes/Files_links/cssFileReferences.html" class="pure-menu-link">Files and links</a>
+             <ul class="pure-menu-children">
+                 <li class="pure-menu-item"><a href="My_notes/Files_links/cssFileReferences.html" class="pure-menu-link">Files and links</a></li>
+                 <li class="pure-menu-item"><a href="My_notes/Files_links/links.html" class="pure-menu-link">Form UI learnings</a></li>
+             </ul>
+            </li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="index.html" id="menuLink1" class="pure-menu-link">Forms</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="wip/formInput.html" class="pure-menu-link">Test form - stays</a></li>
+                    <li class="pure-menu-item"><a href="My_notes/Forms_about/formUI.html" class="pure-menu-link">Form UI learnings</a></li>
+                    <li class="pure-menu-item"><a href="My_notes/Forms_about/formData.html" class="pure-menu-link">Using form data</a></li>
+                     <li class="pure-menu-item"><a href="My_notes/Forms_about/formOutputLearnings.html" class="pure-menu-link">Form data output</a></li>
+                </ul>
+            </li>
+            <li class="pure-menu-item pure-menu-allow-hover">
+                <a href="dateLearnings.html" id="menuLink1" class="pure-menu-link">Dates</a>
+            </li>
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="My_notes/Objects_Arrays/access.html" id="menuLink1" class="pure-menu-link">Objects and arrays</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="My_notes/Objects_Arrays/access.html" class="pure-menu-link">Getting to content in objects/arrays</a></li>
+                    <li class="pure-menu-item"><a href="My_notes/Objects_arrays/builtInObjects/stringObjectMethods.html" class="pure-menu-link">Strings as objects </a></li>
+                </ul>
+            </li>
+
+            <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+                <a href="My_notes/Objects_Arrays/access.html" id="menuLink1" class="pure-menu-link">The Dom</a>
+                <ul class="pure-menu-children">
+                    <li class="pure-menu-item"><a href="My_notes/Objects_arrays/builtInObjects/stringObjectMethods.html" class="pure-menu-link">The DOM - no jQuery</a></li>
+                    <li class="pure-menu-item"><a href="My_notes/jQuery/jQuery.html" class="pure-menu-link">The DOM - with jQuery</a></li>
+                </ul>
+            </li>
+
+
+           <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover"><a href="My_notes/Files_links/cssFileReferences.html" class="pure-menu-link">Draft sites</a>
+             <ul class="pure-menu-children">
+                 <li class="pure-menu-item"><a href="Itinerary_simple/itinerary.html" class="pure-menu-link">Basic HTML, JS and DOM</a></li>
+             </ul>
+            </li>
+
+        </ul>
+
+
+
+
+            <h1>About this page and what I've learnt so far</h1>
+            <h2>Where is the data coming from?</h2>
+            <p>Currently, I have a very simple js function working. I have stored the information about our trip in an array with objects in that array detailing each leg of the journey. I have then used that array, to display information (in a very unbeautiful
+                format - on the page ). Ultimately, I would like the data to come from our trips collections in the mongoDB</p>
+            <h2>How am I accessing it</h2>
+            <p>So far, I am working with the data about each journey from one place to another. I have found this very challenging! With the initial functions which I wrote to retrieve the individual journeys, I used the ECMA6 forEach loops. This worked
+                well for that particular use case. </p>
+            <p>The calculating the cost function, I found challenging. I initially solved this by using the following</p>
+            <ol>
+                <li>a filter function, to select only those things with costs in them</li>
+                <li>a map function - to enable me to more readily access the values in the object nested in the array</li>; and
+                <li>then the reduce method</li>
+             <p>This was far too complicted than it needed to be.  I have now simplified that function in trips.js file and pushed the costs into an array and used the reduce function for it.</p>
+            </ol>
+            <h4>How are you getting things on the page?</h4>
+            <h5>DOM manipulation</h5>
+            <p>Initially, I  worked with only the DOM  to get things on the page. This is what I initially used to get the stays on the page.  I am now using jquery. both stays.js and trips2.js have been updated to use jQuery for DOM manipulation</p>
+            <h5>Look and feel</h5>
+            <p>I am using materialze for the look and feel of this site </p>
+
+            <h4>What do you still want to do?</h4>
+            <ul class="tasks">
+             <li>I read in the Ducket book, that the data can be held in a JSON file</li>
+             <li>I want to use mongoDB to store and retrieve the data. </li>
+            </ul>
+
+            <h4>What is helping you</h4>
+            <p>See chapter 4-6 of Eloquent Javascript</p>
+
+
+
+
+
+
+    </div>
+
+
+    <script src="../node_modules/jQuery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../css/materialize-css/bin/materialize.js"></script>
+    <script src="trips2.js"></script>
+
+</body>
+
+</html>

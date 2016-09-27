@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- add materilize -->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../../css/materialize-css/bin/materialize.css" media="screen,projection" />
+    <!-- let browser know website is optimized for mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+</head>
+
+<body>
+    <div class="container">
+     <h1>Events</h1>
+     <h1>What are events?</h1>
+     <p>Events are the browser saying 'hey - this just happened!'</p>
+     <p>Events are said to be <em>fired</em> or <em>raised</em> and <em>trigger</em> scripts</p>
+     <p></p>
+     <ol>
+      <li>user interaction creates an event;</li>
+      <li>the event triggeres some code;</li>
+      <li>the code responds to the user somehow</li>
+     </ol>
+
+     <h1>Working with events</h1>
+     <ol>
+      <li>html event handlers - not recommended</li>
+      <li>traditional DOM event handlers</li>
+      <li>DOM level 2 event listeners - these are good - enable you to trigger multiple functions on one event</li>
+      <li>jQuery </li>
+     </ol>
+
+     <h2>Event listeners</h2>
+     <code>element.addEventListener('event', functionName [,Boolean]);</code>
+     <p>eg</p>
+     <code>
+      function = checkUserName(){}; <br>
+      var el = document.getElementByID('username'); <br>
+      el.addEventListener('blur', checkUserName,false)br
+     </code>
+
+     <h2>jQuery events - .on() method</h2>
+     <p>.on() method used to handle all events</p>
+     <ol>Steps:
+      <li>use a selector to create a jQuery selector;</li>
+      <li>use .on() to indicate which event you want to respond to</li>
+     </ol>
+     <p>eg</p>
+     <code>
+      $('li').on('click', function(){})
+     </code>
+
+    <h3>Types of events in jQuery</h3>
+    <dl>
+     <dt>UI events</dt>
+     <dd>focus, blur, change </dd>
+    <dt>UI events</dt>
+    <dt>Keyboard</dt>
+   <dd>input, keydown, keyup, keypress</dd>
+    <dt>mouse</dt>
+   <dd>click, dblclick, mouseup, mousedown, mouseover, mousemove, mouseout, hover</dd>
+    <dt>Form</dt>
+   <dd>submit, select, change</dd>
+    <dt>document</dt>
+   <dd>ready, load, unload</dd>
+    <dt>browser</dt>
+   <dd>error, resize, scroll</dd>
+     </dl>
+
+    </div>
+
+    <script src="../node_modules/jQuery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../../../css/materialize-css/bin/materialize.js"></script>
+    <script src="#"></script>
+
+</body>
+
+</html>

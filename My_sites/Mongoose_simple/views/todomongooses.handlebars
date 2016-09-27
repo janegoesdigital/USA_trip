@@ -1,0 +1,19 @@
+<h1>What is this component?</h1>
+<p>
+ This component is using a mongodb database to retrieve data from the db, and display it on the page via handlebars.
+</p>
+<h1>How the hell did you manage to get it on the page?</h1>
+<p>
+ Well Jane, I'm glad you asked.  I created the DB.  I connected the DB to the app in the main.js.  Within my routing function in main.js, I retrieved the db entries. I then passed them as an argument to the res function.  I had to create a name for handlebars to grab as the name of the array of objects retrieved from mongodb.  I then used the handlebars helper function "each" to iterate over the array of objects and display all the data. 
+</p>
+
+
+{{#each tasksNameForHandlebars}}
+<p>
+The task is " <em>{{task}}</em> ""<br>
+Time estimated to do it is {{timeEst}} minutes <br>
+Priority is {{priority}}
+</p>
+{{/each}}
+
+</p>

@@ -1,5 +1,6 @@
 var express = require("express");
 var fortune = require("./lib/fortune.js");
+var testMongoose = require("testMongoose.js");
 
 var app = express();
 

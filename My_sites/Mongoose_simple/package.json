@@ -1,0 +1,20 @@
+{
+  "name": "mongoose_simple",
+  "version": "1.0.0",
+  "description": "test ground for mongoose",
+  "main": "main.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "test",
+    "mongoose",
+    "database"
+  ],
+  "author": "jane hogan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.0",
+    "express-handlebars": "^3.0.0"
+  }
+}

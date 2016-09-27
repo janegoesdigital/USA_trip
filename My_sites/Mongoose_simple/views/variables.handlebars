@@ -1,0 +1,22 @@
+{{!Basic Variable Access}}
+<h3>Welcome {{user.firstname}}</h4>
+
+{{!Changing Scope of Variable Access}}
+{{!Instead of user.lastname and user.email we are directly accessing lastname,email}}
+
+
+<p>
+ This is an example of the context being defined within the route ie I have included an array of objects within the app.get function in the main.js
+</p>
+
+<p>
+ user name: {{#with user}} <br>
+ last name: {{lastname}} {{email}} <br>
+ {{/with}}
+</p>
+
+<h2>My data</h2>
+<p>
+ first one: {{key.object}} <br>
+ second one: {{key.keyInObj}} <br>
+</p>

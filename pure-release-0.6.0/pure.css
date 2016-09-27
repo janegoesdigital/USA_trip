@@ -29,7 +29,7 @@ html {
 body {
   margin-left: auto;
   margin-right: auto;
-  width:90%;
+  width:85%;
 }
 
 /* HTML5 display definitions
@@ -147,8 +147,36 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  color: #181842;
 }
 
+/*Jane code*/
+h2 {
+color: #45d9fd
+}
+
+h3 {
+color:
+
+}
+
+div {
+ padding: 1em;
+ margin-top: 0;
+ margin-left: 1em;
+ margin-right: 1em;
+ margin-bottom: 3em;
+
+}
+
+.learning  {
+
+ background-color: #dddfe6
+}
+
+.nextSteps{
+ background-color:#e85a71;
+}
 /**
  * Address styling not present in IE 8/9.
  */
@@ -1252,6 +1280,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 0;
     margin: 0;
     height: 100%;
+
 }
 
 .pure-menu-link,
@@ -1259,12 +1288,14 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     display: block;
     text-decoration: none;
     white-space: nowrap;
+    background-color: #dddfe6;
 }
 
 /* HORIZONTAL MENU */
 .pure-menu-horizontal {
     width: 100%;
     white-space: nowrap;
+
 }
 
 .pure-menu-horizontal .pure-menu-list {
@@ -1368,7 +1399,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 .pure-menu-link {
-    color: #777;
+    color: #181842;
 }
 
 .pure-menu-children {
@@ -1392,7 +1423,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-menu-active > .pure-menu-link,
 .pure-menu-link:hover,
 .pure-menu-link:focus {
-    background-color: #eee;
+    background-color: #e85a71;
 }
 
 .pure-menu-selected .pure-menu-link,

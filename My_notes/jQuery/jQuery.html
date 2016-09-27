@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="../../css/materialize-css/bin/materialize.css" media="screen,projection" />
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jQuery</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1>What is jQuery?</h1>
+        <p>Way of manipulating the DOM using CSS-style selectors</p>
+        <p>Creates an object called jQuery which holds reference to the DOM elements.</p>
+        <div class="snippet">
+            <p> Can call the object jQuery() or us the shorthand $().</p>
+        </div>
+        <p>Has cross-browser suppor and event handler simpler</p>
+        <p>Once have made a selection from the DOM, can chain methods.</p>
+        <p>Simpler to loop through elements</p>
+
+        <p>jQuery motto - "Write less - do more"</p>
+
+        <h1>How to include jQuery</h1>
+        <p>Need to include a reference to it in a script tag.</p>
+        <h2>Include the file in your site</h2>
+        <p>Place it just before the closing body tag </p>
+
+
+        <h2>CDN</h2>
+        <p>Can use CDN (content delivery network) - series of servers spread out around the world designed to serve static files. Tries to find server near you, and send the file. If include it this way, need to include an OR in case it can't be loaded</p>
+        <div class="snippet">
+            <p>See Ducket p 355 </p>
+        </div>
+
+
+        <h1>jQuery selectors</h1>
+        <p>See p302 of Duckett book and <a href="https://jquery.com/">jQuery website</a></p>
+
+        <h1>Key selectors to identify what you want to work with</h1>
+        <h2>Basic selectors</h2>
+        <dl>
+            <dt>*</dt>
+            <dd>selects all elements</dd>
+            <dt>element</dt>
+            <dd>All elements with THAT NAME</dd>
+            <dt>#id</dt>
+            <dd>Elements with that id attribute</dd>
+            <dt>.class</dt>
+            <dd>Elements in that class</dd>
+            <dt>selecor 1, selector 2</dt>
+            <dd>Elements that match more than one selector - see esp add() method which is more effecient when combining selections</dd>
+        </dl>
+
+        <h3>Note</h3>
+        <ul>
+            <li>can also select elements by hierarchy</li>
+            <li>are a set of basic filters - including - not, first, last, even, odd, equal, greater tahn, less than, header (to select all h1=h6, animated, focus);</li>
+            <li>there are content filters</li>
+            <li>visibility filters</li>
+            <li>child filters</li>
+            <li>attribute filters</li>
+            <li>form selectors </li>
+        </ul>
+
+        <h1>Doing something with the selected elements</h1>
+        <h2>Getting the content only </h2>
+
+        <h3>.html()</h3>
+        <p>retrieves only the HTML inside the FIRST element selected</p>
+
+        <h3>.text() method</h3>
+        <p>returns content from every elemenet. </p>
+
+        <h3>.val()  - gets the content from an input or text area</h3>
+
+        <h2>Replacing the content </h2>
+        <p>Can use the .html and .text methods - pass in the as an argument the text you want to add. Will change all of the content of the elements selected</p>
+        <div class="snippet">
+            p$('li)').html("update the content")
+        </div>
+
+        <h3>replaceWith()</h3>
+        <p>replacces every element wiht the new content. Pass in the new content as an argument into the function</p>
+
+        <h3>remove()</h3>
+        <p>Like it's name said - it removes the selected content. </p>
+
+        <h2>Adding new content</h2>
+        <ol>Steps:
+            <li>create the new element; and </li>
+            <li>add the new element to the page</li>
+        </ol>
+        <h3>Creating a new element</h3>
+        <!-- <div class="snippet">
+   var $newItem = $('li class-"new">item>???);
+  </div> -->
+
+        <h2>Adding the new element to the page</h2>
+        <h3>.before()</h3>
+        <h3>.after()</h3>
+        <h3>.prepend()</h3>
+        <p>inserts the content inside the selected element AFTER the OPENING tag</p>
+        <h3>.append()</h3>
+        <p>inserts content before the closing tag of the selected item</p>
+
+        <h2>Getting and setting attributes</h2>
+
+
+        <h1>Looping through elements</h1>
+        <h2>Implicit iteration</h2>
+        <p>If selector returns multiple elements, upate all using one method. No need to use a loop - uses implicit iteration</p>
+        <h2>Other iteration - .each() method</h2>
+        <p>recreate the functionality of a loop using the .each() method</p>
+        <p>one or more statements are performed on each of the items in the selection of elements that are returned</p>
+        <p>can combine it with this or $(this). The $(this) creates a new jQuery selection containing the current element. Allows you to use jQuery methods</p>
+        <!-- <div class="snippet">
+ <p>$('li').each(function(){
+  var ids = this.id;
+  <!-- $(this).append(' <em class="order"' + ids + </em>);
+ })</p> -->
+
+        <!-- </div> -->
+
+
+
+        <h1>Syntax</h1>
+
+
+
+        <h2>Conventions</h2>
+        <h3>Use the . </h3>
+        <p>Distinguish jQuery methods by using the . before names</p>
+
+        <h1>Checking a page is ready</h1>
+        <p>Two options: load event and ready event</p>
+        <p>Simplest way $(document).ready(console.log("are you ready"))</p>
+        <p>.load() - use when there are assets eg pictures etc which go with the site</p>
+        <p>can also place all your script inside the function</p>
+
+
+        <h1>References</h1>
+        <cite>John Duckett Javascript and jQuery</cite>
+
+    </div>
+
+    <script src="../node_modules/jQuery/dist/jquery.js"></script>
+    <script type="text/javascript" src="../../css/materialize-css/bin/materialize.js"></script>
+    <script src="stays.js"></script>
+
+</body>
+
+</html>

@@ -11,6 +11,7 @@ body {
     /*display: inline-block;*/
     color: white;
 
+
 }
 
 
@@ -43,9 +44,20 @@ h3 {
 
 p {
 text-align: center;
-
 }
 
+dl {
+    border: 3px double #AD4196;
+    padding: 0.5em;
+  }
+  dt {
+    float: left;
+    clear: left;
+    width: 100px;
+    text-align: right;
+    font-weight: bold;
+    color: #AD4196;
+  }
 
 nav {
   background-color: pink;
