@@ -3,6 +3,30 @@
  Currently, I am using this to render all the blogs
 </p>
 
+<h1>Form to create a new blog</h1>
+
+
+<form action="/blogs" method="POST">
+<fieldset>
+ <legend>Tell us about your day</legend>
+  <input type="date" placeholder="date" name="date">
+  <input type="text" name="city" value="city"><br>
+  <p>Tell us about your day</p>
+  <textarea name="keywords" rows="16" cols="100"> Your key thing</textarea> <br>
+  <p>
+   Highlights
+  <textarea name="highlight" rows="8" cols="50"> Highlights</textarea><br>
+  Lowlights</p>
+  <textarea name="lowlight" rows="8" cols="50"> Lowlights</textarea>
+   <p>What yummy food did you eat</p>
+  <textarea name="reflection" rows="8" cols="100"> Eating</textarea> <br>
+  <button type="submit" name="button">Submit</button>
+</fieldset>
+</form>
+
+
+
+
 {{#each displayAllBlogs}}
 
 

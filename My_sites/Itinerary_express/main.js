@@ -1,5 +1,6 @@
 var express = require('express');
 var expressHandlebars = require('express-handlebars');
+var bodyParser= require('body-parser')
 
 var app = express();
 
@@ -12,6 +13,13 @@ app.set('view engine', 'handlebars');
 var Activity = require('./activitiesModel');
 var Trip = require('./tripsModel');
 var Blog = require('./blogsModel')
+
+// Adding body parser - enables you to work with the fomrs
+
+
+
+
+app.use(bodyParser.urlencoded({extended: true}))
 
 // var path    = require("path");
 
@@ -129,6 +137,16 @@ app.get('/blog', function(req,res){
         });
 });
 
+app.post('/blogs', function (req, res){
+  console.log('Yes, we are posting from the blog form!');
+  console.log(req.body);
+  var newBlog = new Blog(req.body);
+  newBlog.save(function(error){
+      if (error) {console.log('oh no something has gone wrong with the saving for a blog!');
+       }
+       console.log('Blog saved successfully!');
+  });
+});
 
 
 
