@@ -1,0 +1,16 @@
+<h1>Hello.  Content from the handlebars blogs starts here</h1>
+<p>
+ Currently, I am using this to render all the blogs
+</p>
+
+{{#each displayAllBlogs}}
+
+
+<h3 > Date: </em>{{date}} </h3> </br>
+<em> City : </em> {{city}}  </h3>
+<p> <em> Main things we did: </em> {{keywords}} <br>
+<em> Highlights: </em> {{highlight}} <br>
+<em> Lowlights: </em> {{lowlight}} <br>
+<em> Reflections: </em> {{reflections}} <br>
+</p>
+{{/each}}

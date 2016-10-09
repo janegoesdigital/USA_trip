@@ -1,0 +1,16 @@
+<h1>Hello.  Content from the handlebars trips model starts here</h1>
+<p>
+ Currently, I am using this to render all the trips
+</p>
+
+
+
+
+{{#each displayAllTrips}}
+
+<h3>Trip from : {{from}} to {{to}} </h3>
+When {{date}} <br>
+How are we travelling: {{by}}
+How long will it take in hours: {{travelTime}} <br>
+</p>
+{{/each}}
